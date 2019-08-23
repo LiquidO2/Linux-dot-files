@@ -1,0 +1,25 @@
+# location : /usr/share/applications/
+# set symbolic link at : /usr/bin/firefox-b
+
+[Desktop Entry]
+Version=1.0
+Name=Firefox Beta
+GenericName=Web Browser
+Exec=firefox-b -no-remote -p "beta"
+Icon=/opt/firefox-nightly/browser/chrome/icons/default/default128.png
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-xpinstall;
+StartupNotify=true
+StartupWMClass=firefox
+Categories=Network;WebBrowser;
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=New Window
+Exec=firefox-b --new-window -no-remote -p "beta"
+
+[Desktop Action new-private-window]
+Name=New Private Window
+Exec=firefox-b --private-window -no-remote -p "beta"
