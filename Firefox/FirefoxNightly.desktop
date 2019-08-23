@@ -1,0 +1,25 @@
+# location : /usr/share/applications/
+# set symbolic link at : /usr/bin/firefox-n
+
+[Desktop Entry]
+Version=1.0
+Name=Firefox Nightly
+GenericName=Web Browser
+Exec=firefox-n -no-remote -p nightly
+Icon=/opt/firefox-nightly/browser/chrome/icons/default/default128.png
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+MimeType=text/html;text/xml;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-xpinstall;
+StartupNotify=true
+StartupWMClass=firefox
+Categories=Network;WebBrowser;
+Actions=new-window;new-private-window;
+
+[Desktop Action new-window]
+Name=New Window
+Exec=firefox-n --new-window -no-remote -p nightly
+
+[Desktop Action new-private-window]
+Name=New Private Window
+Exec=firefox-n --private-window -no-remote p -nightly %u
